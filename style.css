@@ -353,7 +353,10 @@ body {
     font-weight: 200
 }
 .siteHeader_nav {
-    margin-top: 30px
+    margin-top: 30px;
+    border-bottom: 1px solid #181818;
+    padding-bottom: 5px;
+
 }
 
 .siteHeader_nav ol {
