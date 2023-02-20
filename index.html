@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg">
+    <div id="Page">
+        <div id="Background"></div>
+        <div class="mask" id="Mask">
+            <div class="mask_top"></div>
+            <div class="mask_bottom"></div>
+            <div class="mask_left"></div>
+            <div class="mask_right"></div>
+        </div>
+        <div class="frame" id="Frame">
+            <div class="frame_line frame_line-left"></div>
+            <div class="frame_line frame_line-right"></div>
+            <div class="frame_line frame_line-top"></div>
+            <div class="frame_line frame_line-bottom"></div>
+        </div>
+        <header class="siteHeader" id="SiteHeader">
+            <h1 class="siteHeader_title">John Briggs</h1>
+            <p class="siteHeader_label">computer engineering, robotics - university of pennsylvania</p>
+            <br><br>
+            <p class="siteHeader_sublabel">
+                <a href="https://docs.google.com/document/d/1-T61mSvkR_Igq6vTzYeiK4Rw3J6KJsAJc9vYDp9P7Co/edit?usp=share_link" target="_blank">resume</a>
+                 &NonBreakingSpace;|&NonBreakingSpace; 
+                <a href="https://www.linkedin.com/in/jjhbriggs/" target="_blank">linkedin</a>
+                 &NonBreakingSpace;|&NonBreakingSpace; 
+                <a href="https://github.com/jjhbriggs" target="_blank">github</a>
+                 &NonBreakingSpace;|&NonBreakingSpace; jjhbriggs@gmail.com</p>
+            <!-- <nav class="siteHeader_nav" x-data="">
+                <ol>
+                    <li>
+                        <a class="_text" href="https://www.linkedin.com/in/jjhbriggs/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a class="_text" href="https://github.com/jjhbriggs" target="_blank">Github</a>
+                    </li>
+                    <li>
+                        <a class="_text" href="https://github.com/jjhbriggs" target="_blank">Resume</a>
+                    </li>
+                </ol>
+            </nav> -->
+            <nav class="siteHeader_nav" x-data="">
+                <ol>
+                    <li :class="{ 'is-selected': $store.ui.currentPath === '/' }" class="is-selected">
+                        <div class="_dot">►</div>
+                        <a class="_text" data-page="home" href="javascript:void(0)">Hello</a>
+                    </li>
+                    <hr>
+                    <li :class="{ 'is-selected': $store.ui.currentPath === '/ncap/' }">
+                        <div class="_dot">►</div>
+                        <a class="_text" data-page="ncap" href="javascript:void(0)">Neuroscience Cloud Analysis As a Service <span class="_dash">-</span> <span class="subtext">Full Stack Development, Data Science</span></a>
+                    </li>
+                    <li :class="{ 'is-selected': $store.ui.currentPath === '/uav/' }">
+                        <div class="_dot">►</div>
+                        <a class="_text" data-page="uav" href="javascript:void(0)">3DVFH* for Autonomous UAV Navigation <span class="_dash">-</span> <span class="subtext">Computer Vision, Perception, Planning, Tracking</span></a>
+                    </li>
+                    <li :class="{ 'is-selected': $store.ui.currentPath === '/fire/' }">
+                        <div class="_dot">►</div>
+                        <a class="_text" data-page="fire" href="javascript:void(0)">Fast R-CNN Detection for Fire Safety <span class="_dash">-</span> <span class="subtext">Computer Vision, Detection</span></a>
+                    </li>
+                    <li :class="{ 'is-selected': $store.ui.currentPath === '/dnn/' }">
+                        <div class="_dot">►</div>
+                        <a class="_text" data-page="dnn" href="javascript:void(0)">Deep Learning for Autonomous Vehicle Control <span class="_dash">-</span> <span class="subtext">Computer Vision, Perception</span></a>
+                    </li>
+                    <li :class="{ 'is-selected': $store.ui.currentPath === '/pennapps/' }">
+                        <div class="_dot">►</div>
+                        <a class="_text" data-page="pennapps" href="javascript:void(0)">PennApps XXII <span class="_dash">-</span> <span class="subtext">Full Stack Development</span></a>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+        <main class="content" id="Content" data-scroll="area">
+            <div class="content_inner" data-scroll="target" style="transform: translate3d(0px, 0px, 0px);">
+                <section class="page" data-page="home" style="display: block; opacity: 1;">
+                    <div class="page_content home">
+                        <p class="home_aboutme">
+                            Hey, I'm John!  <br>
+                            I am pursuing a BSE in Computer Engineering and MSE in Robotics at the University of Pennsylvania. <br>
+                            I have strong programming skills in Python, C/C++, Javascript, (and a variety of other languages), <br>
+                            and am particularly experienced with artificial intelligence & machine learning, computer vision, <br>full stack development, and embedded systems.<br><br>
+                            Work in autonomous vehicles is especially exciting to me—more specifically in planning and prediction.<br>
+
+                            I am currently searching for a Summer 2024 role. 
+                            <br><br>
+                        </p>
+                    </div>
+                </section>
+                <section class="page" data-page="fire">
+                    <br><br><br><br><br><br><br><br>
+                    <br><br><div class="extraspacer"><br><br><br></div>
+                    <div class="page_content fire">
+                        <div class="fire_section">
+                            
+                            
+                            <div class="fire_list">
+                                <div class="fire_item">
+                                    <div class="fire_title">HEADCOUNT</div>
+                                    <div class="fire_bold">Python / PyTorch</div>
+                            </div>
+                                
+                                <div class="fire_info">
+                                    
+                                    Implemented Fast R-CNN with PyTorch to improve fire safety in public buildings. <br>
+                                    Provides detections of potential victims and accurate crowd headcounts
+                                    within different parts of a building through an online dashboard built on Google Cloud, <br>ensuring more effective evacuations and improved firefighter response</div>
+                                <img class="rounded" src="img/fire.png">
+                                <h2 class="fire_heading">Python, PyTorch, Flask, Google Cloud, Raspberry Pi</h2><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <section class="page" data-page="dnn">
+                    <br><br><br><br><br><br><br><br>
+                    <br><br><div class="extraspacer"><br><br><br></div>
+                    <div class="page_content fire">
+                        <div class="fire_section">
+                            
+                            
+                            <div class="fire_list">
+                                <div class="fire_item">
+                                    <div class="fire_title">DNN CAR</div>
+                                    <div class="fire_bold">Python / Tensorflow</div>
+                            </div>
+                                
+                                <div class="fire_info">
+                                    
+                                    Created a neural network powered vehicle navigation system in Tensorflow, designed to make control predictions based on a low resolution image feed (from PiCam).<br>
+                                    This model was deployed on a custom ~1/12 scale car, controlled by a Raspberry Pi.
+                                </div>
+                                <img class="rounded" src="img/dnn.jpg">
+                                <h2 class="fire_heading">Python, Tensorflow, Keras, Raspberry Pi</h2><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <section class="page" data-page="uav">
+                    <br><br><br><br><br><br><br><br>
+                    <br><br><div class="extraspacer"><br><br><br></div>
+                    <div class="page_content fire">
+                        <div class="fire_section">
+                            
+                            
+                            <div class="fire_list">
+                                <div class="fire_item">
+                                    <div class="fire_title">SEARCH & RESCUE UAV</div>
+                                    <div class="fire_bold">C++ / ROS</div>
+                            </div>
+                                
+                                <div class="fire_info">
+                                    
+                                    Designed a low-cost UAV platform with ROS for search and rescue assistance. <br>
+                                    The system implements a 3DVFH* for SLAM, using this algorithm for obstacle avoidance and navigation of unmapped terrain. <br>
+                                    This project was first simulated with Gazebo, and deployed on custom quadcopter hardware. <br>
+                                    Vision sensors include an Intel Realsense D455 camera for environment perception and mapping, and an Intel Realsense T265 camera for auxiliary localization when in unreliable GPS coverage.
+                                </div>
+                                <div style="white-space:normal;">
+                                    <img class="rounded" src="img/drone.jpg">
+                                    <img class="rounded" src="img/drone2.png">
+                                    <img class="rounded" src="img/drone3.jpg">
+                                </div>
+                                
+                                <h2 class="fire_heading">C++, ROS, Gazebo, PX4, Intel Realsense</h2><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <section class="page" data-page="ncap">
+                    <br><br><br><br><br><br><br><br>
+                    <br><br><div class="extraspacer"><br><br><br></div>
+                    <div class="page_content fire">
+                        <div class="fire_section">
+                            
+                            
+                            <div class="fire_list">
+                                <div class="fire_item">
+                                    <div class="fire_title">NEUROCAAS</div>
+                                    <div class="fire_bold">Python / AWS</div>
+                            </div>
+                                
+                                <div class="fire_info">
+                                    
+                                    <u><a href="http://neurocaas.com/" target="_blank">NeuroCAAS</a></u> is an open-source scientific resource that uses cloud resources to run powerful modern data analyses.
+                                    <br>
+                                    NeuroCAAS packages these analyses into fully portable descriptions called blueprints, which can then be deployed to analyze data on demand and automatically.
+                                    <br>
+                                    <br>
+
+ 
+
+Developed by the Cunningham Group at Columbia University, my primary contributions involved the following:<br>
+
+ 
+
+- Developed the full stack web interface of NeuroCAAS, an online neuroscience analysis platform, using Python (Django), AWS (EC2, S3, IAM, CloudFormation, STS), and Javascript
+<br>
+- Created an identity and access management system to support thousands of users and research groups
+<br>
+- Improved user deployment time from days to seconds by automating AWS resource deployment and optimizing backend performance; implemented a CI pipeline and wrote tests with 90% coverage
+<br>
+- Integrated research team’s IaC codebase for analyses; streamlined execution of 20+ detection, tracking, deep learning, and other algorithms by adding new features such as an embedded configuration templates
+                                
+<br><br>
+<b><u><a href="https://www.sciencedirect.com/science/article/pii/S0896627322005876" target="_blank">Publication</a></u></b>: T. Abe, I. Kinsella, S. Saxena, E. K. Buchanan, J. Couto, J. Briggs, S. L. Kitt, R. Glassman, J. Zhou, L. Paninski, J. P. Cunningham, "Neuroscience Cloud Analysis As a Service: An open-source platform for scalable, reproducible data analysis." Neuron, Volume 110, Issue 17, 2022, https://doi.org/10.1016/j.neuron.2022.06.018.
+
+
+</div>
+                                <div style="white-space:normal;">
+                                    <img class="rounded" src="img/ncap2.jpg">
+                                    <img class="rounded" src="img/ncap3.png">
+                                </div>
+                                
+                                <h2 class="fire_heading">Python, Django, AWS (EC2, S3, IAM, CloudFormation), Javascript, HTML5/CSS</h2><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <section class="page" data-page="pennapps">
+                    <br><br><br><br><br><br><br><br>
+                    <br><br><div class="extraspacer"><br><br><br></div>
+                    <div class="page_content fire">
+                        <div class="fire_section">
+                            
+                            
+                            <div class="fire_list">
+                                <div class="fire_item">
+                                    <div class="fire_title">PENNAPPS MUSIC APP</div>
+                                    <div class="fire_bold">Javascript / React Native</div>
+                            </div>
+                                
+                                <div class="fire_info">
+                                    
+                                    Built a MERN stack app for PennApps XXII: "... a novel music app intended to help address centralization in the music industry by directly connecting listeners and artists."
+                                    <br>
+                                    A full description is available on <u><a href="https://devpost.com/software/pennapps-music-app" target="_blank">Devpost</a></u>.
+                                    <br>
+                                </div>
+                                <div style="white-space:normal;">
+                                    <img class="rounded" src="img/app.jpg" style="width: 300px">
+                                </div>
+                                
+                                <h2 class="fire_heading">Javascript, React Native, MongoDB, Typescript, Node.js, Express.js</h2><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+        </main>
+    </div>
+    <script>
+        // get all the navigation links
+const navLinks = document.querySelectorAll('.siteHeader_nav ._text');
+
+// get all the sections
+const sections = document.querySelectorAll('.page');
+
+// add click event listeners to the navigation links
+navLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    // prevent the default behavior of the link
+    event.preventDefault();
+    
+    // remove the 'is-selected' class from all navigation links
+    navLinks.forEach(link => {
+      link.parentElement.classList.remove('is-selected');
+    });
+    
+    // add the 'is-selected' class to the clicked navigation link
+    link.parentElement.classList.add('is-selected');
+    
+    // hide all the sections
+    sections.forEach(section => {
+      section.style.display = 'none';
+      section.style.opacity = 0;
+    });
+    
+    // get the page name from the data-page attribute of the clicked link
+    const pageName = link.getAttribute('data-page');
+    
+    // show the section with the matching data-page attribute
+    const selectedSection = document.querySelector(`.page[data-page="${pageName}"]`);
+    selectedSection.style.display = 'block';
+    selectedSection.style.opacity = 1;
+
+    //history.pushState({ page: pageName }, null, `/${pageName}/`);
+  });
+});
+
+
+// window.addEventListener('popstate', (event) => {
+//   // get the page name from the state object
+//   const pageName = event.state?.page;
+  
+//   if (pageName) {
+//     // remove the 'is-selected' class from all navigation links
+//     navLinks.forEach(link => {
+//       link.parentElement.classList.remove('is-selected');
+//     });
+    
+//     // add the 'is-selected' class to the navigation link that matches the page name
+//     const selectedLink = document.querySelector(`._text[data-page="${pageName}"]`);
+//     selectedLink.parentElement.classList.add('is-selected');
+    
+//     // hide all the sections
+//     sections.forEach(section => {
+//       section.style.display = 'none';
+//       section.style.opacity = 0;
+//     });
+    
+//     // show the section with the matching data-page attribute
+//     const selectedSection = document.querySelector(`.page[data-page="${pageName}"]`);
+//     selectedSection.style.display = 'block';
+//     selectedSection.style.opacity = 1;
+//   }
+// });
+    </script>
+</body>
+</html>
